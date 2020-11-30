@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 /**
  * OOP - CA#2 - Nov 2020
- * Your Name:
+ * Your Name: Mark Byrne
  * <p>
- * Your GitHub link:
+ * Your GitHub link: origin	https://github.com/MarkByrneDKIT/oop-ca2.git
  */
 public class App
 {
@@ -60,11 +60,28 @@ public class App
 
         System.out.println("Q2 - tests");
 
+        ArrayList<Property> propertiesAboveBoundary = new ArrayList<>();
+
         ArrayList<Property> properties = new ArrayList<>();
         properties.add(p1);
         properties.add(p2);
 
+        Property p3 = new Property(3,"Richard Collins", "A948743", 32000,456, facilitiesP2);
 
+        properties.add(p3);
+
+        for(int i = 0; i < properties.size(); i++)
+        {
+            System.out.println(properties.get(i));
+        }
+
+        propertiesAboveBoundary = getPropertyPicesAbove(properties, 30000);
+
+
+        for(int i = 0; i < propertiesAboveBoundary.size(); i++)
+        {
+            System.out.println(propertiesAboveBoundary.get(i));
+        }
 
 
 
@@ -72,9 +89,56 @@ public class App
         System.out.println("Q3 - tests");
 
 
+        ArrayList<Property> privateProperties = new ArrayList<>();
+
+        ArrayList<String> facilitiespriv1 = new ArrayList<>();
+        ArrayList<String> facilitiespriv2 = new ArrayList<>();
+        ArrayList<String> facilitiespriv3 = new ArrayList<>();
+
+        PrivateProperty priv1 = new PrivateProperty(17,"Aaron Carter", "A91rd38", 3467,278, facilitiespriv1, 4, "bungalo");
+        PrivateProperty priv2 = new PrivateProperty(18,"Luke Kinsella", "A92rd67", 4357,300, facilitiespriv2, 4, "Semi-D");
+        PrivateProperty priv3 = new PrivateProperty(19,"Sean Winters", "A93rd82", 1098,678, facilitiespriv3, 4, "Detatched");
+
+        privateProperties.add(priv1);
+        privateProperties.add(priv2);
+        privateProperties.add(priv3);
+
+        for(int i = 0; i < privateProperties.size(); i++)
+        {
+            System.out.println(privateProperties.get(i));
+        }
+
+        priv1.calculateTax();
+
+        for(int i = 0; i < privateProperties.size(); i++)
+        {
+            System.out.println(privateProperties.get(i));
+        }
+
+
+
+
+
         System.out.println("Q4 - tests");
 
 
+
+
+    }
+    public ArrayList<Property> getPropertyPicesAbove(ArrayList<Property> properties, int boundaryPrice)
+    {
+        ArrayList<Property> sellingOverBoundaryProperties = new ArrayList<>();
+
+        for(int i = 0; i < properties.size(); i++)
+        {
+            if(properties.contains(boundaryPrice))
+            {
+                sellingOverBoundaryProperties.add(properties.get(i));
+            }
+
+        }
+
+        return sellingOverBoundaryProperties;
     }
 
 
