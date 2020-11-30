@@ -54,7 +54,19 @@ public class App
 
         p2.calculateTax();
 
+
+
+
+
         System.out.println("Q2 - tests");
+
+        ArrayList<Property> properties = new ArrayList<>();
+        properties.add(p1);
+        properties.add(p2);
+
+
+
+
 
 
         System.out.println("Q3 - tests");

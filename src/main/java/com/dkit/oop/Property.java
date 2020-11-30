@@ -2,12 +2,11 @@ package com.dkit.oop;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Scanner;
+
 
 
 public class Property
 {
-    Scanner keyboard = new Scanner(System.in);
 
     private int propertyID;
     private String owner;
@@ -122,8 +121,7 @@ public class Property
     @Override
     public String toString() {
         return "Property{" +
-                "keyboard=" + keyboard +
-                ", propertyID=" + propertyID +
+                "propertyID=" + propertyID +
                 ", owner='" + owner + '\'' +
                 ", postcode='" + postcode + '\'' +
                 ", sellingPrice=" + sellingPrice +
